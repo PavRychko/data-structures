@@ -31,12 +31,7 @@ public class ArrayList implements List {
     public Object remove(int index) {
         boundsCheck(index);
         Object removed = array[index];
-        if(index == 0){
-            System.arraycopy(array, 1, array, 0, size-1 );
-        }else {
-            System.arraycopy(array, 0, array, 0, size - index - 1);
-            System.arraycopy(array, index + 1, array, index, size - index);
-        }
+        System.arraycopy(array, index + 1, array, index, size - index);
         size--;
         return removed;
     }
