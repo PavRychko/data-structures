@@ -8,7 +8,7 @@ public class ArrayListTest {
 
     // add value to the end of the list
     //  void add(Object value);
-    @DisplayName("add, get, size and isEmpty test")
+    @DisplayName("add, get, size and isEmpty test with exceptions")
     @Test
     public void addTest() {
         ArrayList arrayList = new ArrayList();
@@ -43,7 +43,7 @@ public class ArrayListTest {
 //    otherwise throw new IndexOutOfBoundsException
 //    void add(Object value, int index);
 
-    @DisplayName("add by index test")
+    @DisplayName("add by index test with exceptions")
     @Test
     public void addByIndexTest(){
         ArrayList arrayList = new ArrayList();
@@ -76,7 +76,7 @@ public class ArrayListTest {
     // [B (index = 0) , C (index = 1)]
     // Object remove(int index);
 
-    @DisplayName("remove by index test")
+    @DisplayName("remove by index test with exceptions")
     @Test
     public void removeTest(){
         ArrayList arrayList = new ArrayList();
@@ -97,7 +97,7 @@ public class ArrayListTest {
     // we can set value by index between [0, size - 1]
     // otherwise throw new IndexOutOfBoundsException
 //    Object set(Object value, int index);
-    @DisplayName("set value Test")
+    @DisplayName("set value Test with exceptions")
     @Test
     public void setValueTest(){
         ArrayList arrayList = new ArrayList();
@@ -120,7 +120,7 @@ public class ArrayListTest {
         assertEquals(expectedMessage2, actualMessage2);
     }
 
-    @DisplayName("clear Test")
+    @DisplayName("clear Test with exceptions")
     @Test
 public void clearTest() {
         ArrayList arrayList = new ArrayList();
@@ -138,7 +138,7 @@ public void clearTest() {
         assertEquals(expectedMessage, actualMessage);
     }
 
-    @DisplayName("contains test")
+    @DisplayName("contains test with exceptions")
     @Test
     public void containsTest(){
         ArrayList arrayList = new ArrayList();
@@ -158,7 +158,7 @@ public void clearTest() {
     // [A, B, A, C] indexOf(A) -> 0
     // -1 if not exist
 //    int indexOf(Object value);
-    @DisplayName("index of and last index of test")
+    @DisplayName("index of and last index of test with exceptions" )
     @Test
     public void indexOfTest(){
         ArrayList arrayList = new ArrayList();
