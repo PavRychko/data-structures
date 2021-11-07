@@ -62,8 +62,8 @@ public class ArrayListTest {
         String actualMessage2 = exception2.getMessage();
         assertEquals(expectedMessage2, actualMessage2);
 
-        arrayList.add("4", 2);
-        assertEquals("4", arrayList.get(2));
+        arrayList.add("4", 1);
+        assertEquals("4", arrayList.get(1));
         assertEquals("3", arrayList.get(3));
         assertEquals(4, arrayList.size());
 

@@ -32,6 +32,7 @@ public class ArrayList implements List {
         boundsCheck(index);
         Object removed = array[index];
         System.arraycopy(array, index + 1, array, index, size - index);
+        array[size-1] = null;
         size--;
         return removed;
     }
@@ -120,9 +121,9 @@ public class ArrayList implements List {
         return result.toString();
     }
 
-    void setInitialSize(int i) {
+    void setInitialSize(int initialSize) {
         if(array == null){
-            array = new Object[i];
+            array = new Object[initialSize];
         }
     }
 
@@ -140,7 +141,7 @@ public class ArrayList implements List {
 
     void arraySizeCheck(){
         if(size == array.length){
-            Object[] temp = new Object[array.length * 2];
+            Object[] temp = new Object[(int)(array.length * 1.5)];
             System.arraycopy(array, 0, temp, 0, array.length-1);
             array = temp;
         }
