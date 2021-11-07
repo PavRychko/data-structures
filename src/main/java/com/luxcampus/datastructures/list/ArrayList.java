@@ -78,12 +78,7 @@ public class ArrayList implements List {
     @Override
     public boolean contains(Object value) {
         nullCheck(value);
-        for (int i = 0; i < size; i++) {
-            if(array[i].equals(value)){
-                return  true;
-            }
-        }
-        return false;
+       return indexOf(value) != -1;
     }
 
     @Override
