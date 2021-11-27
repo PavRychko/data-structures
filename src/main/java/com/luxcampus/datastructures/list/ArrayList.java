@@ -72,7 +72,7 @@ public class ArrayList implements List {
 
     @Override
     public boolean isEmpty() {
-         return size <= 0;
+         return size < 0;
     }
 
     @Override
